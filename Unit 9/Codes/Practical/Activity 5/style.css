@@ -1,0 +1,20 @@
+body {
+  font-family: sans-serif;
+  background-color: #511378;
+}
+
+div {
+  background-color: #fff;
+  margin: 20px 10px 0 10px;
+  padding: 15px;
+}
+
+.heading {
+  color: #17377b;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  font-weight: bold;
+}

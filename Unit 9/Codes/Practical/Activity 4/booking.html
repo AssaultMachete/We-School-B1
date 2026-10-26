@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booking Form</title>
+    </head>
+    <body>
+        <form>
+            <label>
+                Name:
+                <input type="text" name="user" required>
+            </label>
+            <br>
+            <br>
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
+            <br>
+            <br>
+            <label>
+                Phone Number:
+                <input type="tel" name="telephone" required>
+            </label>
+            <br>
+            <br>
+            <label>
+                Arrival Date:
+                <input type="date" name="arrival" required>
+            </label>
+            <br>
+            <br>
+            <label>
+                Departure Date:
+                <input type="date" name="departure" required>
+            </label>
+            <br>
+            <br>
+            <label>
+                Room Type
+                <select>
+                    <option value="-- Select Room --" selected>-- Select Room --</option>
+                    <option value="201">201</option>
+                    <option value="202">202</option>
+                    <option value="203">202</option>
+                </select>
+            </label>
+            <fieldset>
+                <legend>Services</legend>
+                <input type="checkbox" name="service" value="breakfast">
+                Breakfast
+                <input type="checkbox" name="service" value="wifi">
+                Free Wi-Fi
+            </fieldset>
+            <fieldset>
+                <legend>Payment</legend>
+                <input type="radio" name="payment" value="cash">
+                Cash
+                <input type="radio" name="payment" value="card">
+                Card
+            </fieldset>
+            <br>
+            <label>
+                Upload ID
+                <input type="file" name="ID">
+            </label>
+            <br>
+            <br>
+            <label>
+                Notes
+                <textarea rows="5" cols="30"></textarea>
+            </label>
+            <br>
+            <br>
+            <button type="submit">Book Now</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  color: #6c6660;
+  font-style: italic;
+  letter-spacing: 4px;
+}
