@@ -17,9 +17,15 @@ The `Codes/Practical` folder contains HTML exercises and, where applicable, CSS 
 
 Some activities include ZIP files or image assets alongside the source files.
 
-## Unit 10 — Field Training
+## Unit 10 — Field Training Sessions
 
-`Field Training/Session 1` contains a school website project, including HTML, CSS, and image assets. The page introduces the school and presents its programs, teachers, and community.
+The `Field Training` folder contains three school website projects that build on each other throughout the unit:
+
+- `Session 1`: A school landing page with a hero section, campus image, and information cards introducing the school and community.
+- `Session 2`: A multi-page school website with an index, about page, blog page, login page, and supporting style assets.
+- `Session 3`: A booking and registration set of pages for school enrollment and event bookings, including HTML, CSS, and image resources.
+
+These sessions combine HTML, CSS, and image assets to create a complete school website experience.
 
 ## Getting Started
 
