@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Booking Form</title>
+    </head>
+    <body>
+        <div class="booking-form">
+            <form>
+                <h1>Book a stay</h1>
+                <div class="form-field">
+                    <label for="name">Name:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        autocomplete="tel"
+                        required
+                    >
+                </div>
+                <div class="form-field">
+                    <label for="arrival">Arrival Date:</label>
+                    <input type="date" name="arrival" id="arrival" required>
+                </div>
+                <div class="form-field">
+                    <label for="departure">Departure Date:</label>
+                    <input type="date" name="departure" id="departure" required>
+                </div>
+                <div class="form-field">
+                    <label for="room-type">Room Type:</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="" selected disabled>--Select Room Type--</option>
+                        <option value="economy">Economy</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Services</legend>
+                    <label><input type="checkbox" name="services" value="breakfast"> Breakfast</label>
+                    <label><input type="checkbox" name="services" value="wifi"> Free Wi-Fi</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Payment</legend>
+                    <label><input type="radio" name="payment" value="cash" required> Cash</label>
+                    <label><input type="radio" name="payment" value="card"> Card</label>
+                </fieldset>
+                <div class="form-field">
+                    <label for="pic">Upload ID:</label>
+                    <input type="file" name="pic" id="pic">
+                </div>
+                <div class="form-field form-field-wide">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </body>
+</html>

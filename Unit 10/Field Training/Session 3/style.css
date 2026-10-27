@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f1f8;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.register-form,
+.booking-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 32px 24px;
+}
+
+.register-form form,
+.booking-form form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+  width: 100%;
+  max-width: 760px;
+  padding: 36px;
+  border-radius: 12px;
+  background-color: #211832;
+  box-shadow: 0 12px 30px rgb(33 24 50 / 20%);
+  transition:
+    transform 240ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    box-shadow 240ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.register-form form:hover,
+.booking-form form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgb(33 24 50 / 26%);
+}
+
+.register-form h1,
+.booking-form h1 {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  text-align: center;
+}
+
+.form-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-form label,
+.booking-form label {
+  font-weight: 600;
+}
+
+.register-form input:not([type="checkbox"]),
+.booking-form input:not([type="checkbox"]):not([type="radio"]),
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 11px 12px;
+  border: 1px solid #d6d1df;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #211832;
+  font: inherit;
+  transition:
+    border-color 200ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    box-shadow 200ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.booking-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.register-form input:focus,
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: #b995d3;
+  box-shadow: 0 0 0 4px rgb(185 149 211 / 25%);
+}
+
+.register-form .terms-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+}
+
+.register-form .terms-field input,
+.booking-form input[type="checkbox"],
+.booking-form input[type="radio"] {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  accent-color: #f25912;
+}
+
+.register-form button,
+.booking-form button {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 2px;
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #f25912;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 200ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    transform 200ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    box-shadow 200ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.register-form button:hover,
+.booking-form button:hover {
+  transform: translateY(-2px);
+  background-color: #d94d0e;
+  box-shadow: 0 7px 16px rgb(242 89 18 / 25%);
+}
+
+.register-form button:focus,
+.booking-form button:focus {
+  outline: 3px solid #f7a47d;
+  outline-offset: 3px;
+}
+
+.register-form form > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: center;
+}
+
+.booking-form .form-field-wide,
+.booking-form fieldset {
+  grid-column: 1 / -1;
+}
+
+.booking-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-radius: 6px;
+}
+
+.booking-form legend {
+  padding: 0 6px;
+  font-weight: 600;
+}
+
+.booking-form fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 4px 18px 4px 0;
+}
+
+.booking-form input[type="file"] {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .register-form form,
+  .booking-form form {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 560px;
+  }
+
+  .register-form h1,
+  .booking-form h1,
+  .register-form button,
+  .booking-form button,
+  .register-form form > p,
+  .booking-form .form-field-wide,
+  .booking-form fieldset {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-form,
+  .booking-form {
+    align-items: flex-start;
+    padding: 20px 14px;
+  }
+
+  .register-form form,
+  .booking-form form {
+    gap: 16px;
+    padding: 26px 20px;
+  }
+
+  .booking-form fieldset {
+    padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
